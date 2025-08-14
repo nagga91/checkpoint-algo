@@ -1,0 +1,18 @@
+ALGORITHM sentenceCounters
+VAR
+    str:STRING;
+    i,words,voy:INTEGER
+BEGIN
+    Read(str)
+    FOR i FROM 0 TO str.length-1 STEP step  DO
+        IF (str[i]=" " or str[i]=".") THEN
+            words:=words+1
+        END_IF
+        IF (str[i] in {"a","e","i","o","u","y"}) THEN
+            voy:=voy+1
+        END_IF
+    END_FOR
+    write("number of characters: ",str.length)
+    write("number of words: ",words)
+    write("number of voywells: ",voy)
+END
